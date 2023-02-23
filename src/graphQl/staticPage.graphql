@@ -1,0 +1,9 @@
+fragment StaticPage on StaticPageNode {
+  title
+}
+
+query getStaticPage($staticPageSlug: String!) {
+  staticPage(slug: $staticPageSlug) {
+    ...StaticPage
+  }
+}

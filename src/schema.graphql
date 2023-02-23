@@ -1,0 +1,12 @@
+interface Node {
+  id: ID!
+}
+
+type Query {
+  staticPage(slug: String!, previewToken: String): StaticPageNode
+}
+
+type StaticPageNode implements Node {
+  id: ID!
+  title: String!
+}
